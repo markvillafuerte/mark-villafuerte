@@ -1,12 +1,129 @@
-<html>
-<head>
-<title></title>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <title>Registration form</title>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image:url('coffee.jpg');
+        }
+        header {
+            background: transparent;
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: transparent;
+            color: blue;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a { 
+            color: black;   
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        nav a:hover {
+            background: transparent;
+        }
+        form {
+            background: transparent;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 80px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: transparent;
+        }
+        footer {
+           background: transparent;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        p {
+            text-align:center;
+        }
+        
+    </style>
 </head>
 <body>
-<center>
-<h1> WELCOME TO MY SITE </h1>
-<h1> MARK VILLAFUERTE </h1>
-<img src = "src.jpg" width="300" height="200">
-</center>
+
+<header>
+    <h1>Welcome to BSIS 2B Website</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Settings</a>
+</nav>
+ <form id="form1" runat="server">
+
+    <h2>Registration Form</h2>
+    <label for="fullname">Full Name</label>
+    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Enter Fullname" required></asp:TextBox>
+
+    <label for="email">Email</label>
+    <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" placeholder="Enter Email" required></asp:TextBox>
+
+    <label for="password">Password</label>
+    <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" placeholder="Enter Password" required></asp:TextBox>
+
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+ 
+    <asp:Button ID="Button1" runat="server" Text="Register" class="btn btn-primary" OnClick="Button1_Click"></asp:Button>
+
+     <div class="container signin">
+
+        <p>Already have an account? <a href="WebForm2.aspx">Log in</a>.</p>
+            
+
+ </div>
+</form>
+<footer>
+    <p>&copy; 2024 BSIS. SRCians.</p>
+</footer>
+
+
+
 </body>
+</html>
 </html>
